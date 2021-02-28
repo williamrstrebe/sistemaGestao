@@ -1,0 +1,28 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container">
+		<div th:replace="~{base :: titulo('Cadastro de Jogo')}"></div>
+		<div class="card mt-3">
+			<form action="/usuario/salvarJogo" th:object="${requisicaoNovoJogo}"
+				class="card-body" method="post">
+				<div class="form-group">
+					<label for="placar">Placar do Jogo</label> <input
+						th:field="*{placar}" th:errorclass="is-invalid"
+						class="form-control" placeholder="placar do jogo" type="number"
+						min="0" max="1000" /> <small>Informa qual o placar do
+						jogo.</small>
+					<div class="invalid-feedback" th:errors="*{placar}">Por
+						favor, informe um valor para o placar.</div>
+
+				</div>
+
+				<button class="btn btn-primary" type="submit">Cadastrar</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

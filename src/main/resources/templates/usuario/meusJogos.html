@@ -1,0 +1,44 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container">
+		<div class="form-group row">
+			<div class="col-xs-1">
+				<label for="media">Média de placar</label>
+				<input th:value="${avg}" disabled="disabled" class="form-control" id="media"/>
+			</div>
+			<div class="col-xs-1">
+				<label for="recMin">Recorde mínimo</label>
+				<input th:value="${min}" disabled="disabled" class="form-control" id="recMin"/>
+			</div>
+			<div class="col-xs-1">
+				<label for="recMax">Recorde máximo</label>
+				<input th:value="${max}" disabled="disabled" class="form-control" id="recMax"/>
+			</div>
+			<div class="col-xs-1">
+				<label for="recsMins">Recordes mínimos quebrados</label>
+				<input th:value="${jogosMin}" disabled="disabled" class="form-control" id="recsMins"/>
+			</div>
+			<div class="col-xs-1">
+				<label for="recsMax">Recordes máximos quebrados</label>
+				<input th:value="${jogosMax}" disabled="disabled" class="form-control" id="recsMax"/>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div th:replace="~{base :: titulo('Meus jogos')}"></div>
+		
+		
+		<div class="card mb-3" th:each="jogo : ${jogos}">
+
+			<div class="col-xs-1">
+				<label for="valorPlacar">Placar:</label> 
+				<input class=" form-control" th:value="${jogo.placar}"	disabled="disabled" id="valorPlacar"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
