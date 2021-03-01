@@ -12,7 +12,7 @@ public class Aluno {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private String sobreNome;
+	private String sobrenome;
 
 	public Long getId() {
 		return id;
@@ -30,12 +30,12 @@ public class Aluno {
 		this.nome = nome;
 	}
 
-	public String getSobreNome() {
-		return sobreNome;
+	public String getSobrenome() {
+		return sobrenome;
 	}
 
-	public void setSobreNome(String sobreNome) {
-		this.sobreNome = sobreNome;
+	public void setSobreNome(String sobrenome) {
+		this.sobrenome = sobrenome;
 	}
 
 }

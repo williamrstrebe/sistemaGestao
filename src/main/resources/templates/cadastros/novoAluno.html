@@ -1,0 +1,30 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container">
+		<div th:replace="~{base :: titulo('Cadastro de Novo Aluno')}"></div>
+		<div class="card mt-3">
+			<form action="/usuario/salvarAluno" th:object="${requisicaoNovoAluno}"
+				class="card-body" method="post">
+				<div class="form-group">
+					<label for="nome">Cadastro de novo aluno</label> 
+					<input th:field="*{nome}" th:errorclass="is-invalid"
+						class="form-control" placeholder="Nome do aluno" type="text" min="3" max="15" /> 
+<!-- 						<small>Preencha os dados abaixo.</small> -->
+					<input th:field="*{sobrenome}" th:errorclass="is-invalid"
+						class="form-control" placeholder="Sobrenome do aluno" type="text" min="3" max="15" /> 
+<!-- 						<small>Preencha os dados abaixo.</small> -->
+					<div class="invalid-feedback" th:errors="*{sobrenome}">Por
+						favor, informe um valor para o nome.</div>
+
+				</div>
+
+				<button class="btn btn-primary" type="submit">Cadastrar</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

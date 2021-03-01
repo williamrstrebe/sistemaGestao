@@ -1,0 +1,21 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container">
+		<div th:replace="~{base :: titulo('Espaços de Café')}"></div>
+		<a href="cadastros/abreFormSalaCafe"><button
+					class="btn btn-outline-secondary my-2 my-sm-0">Nova Sala de Café</button></a>
+		
+<!-- 		<div class="card mb-3" th:each="jogo : ${jogos}"> -->
+
+<!-- 			<div class="col-xs-1"> -->
+<!-- 				<label for="valorPlacar">Salas de Café:</label>  -->
+<!-- 				<input class=" form-control" th:value="${jogo.placar}"	disabled="disabled" id="valorPlacar"/> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+	</div>
+</body>
+</html>

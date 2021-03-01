@@ -38,13 +38,12 @@
 			<nav class="navbar nav">
 				<!--  parar setar active precisa receber alguma parametro e depois adicionar> th:case="${nomVariavelRecebida} == 'valorEsperado' ? active" -->
 				<a class="nav-item nav-link " th:href="@{/home}">Home</a>
-				<a class="nav-item nav-link" th:href="@{/usuario/meusJogos}">Alunos</a>
-					<a class="nav-item nav-link" th:href="@{/usuario/salasAula}">Salas de Aula</a>
-					<a class="nav-item nav-link" th:href="@{/usuario/salaCafe}">Espacos p/ Café</a>
+				<a class="nav-item nav-link" th:href="@{/usuario/listaAlunos}">Alunos</a>
+				<a class="nav-item nav-link" th:href="@{/usuario/listaSalaAula}">Salas de Aula</a>
+				<a class="nav-item nav-link" th:href="@{/usuario/listaSalaCafe}">Espacos p/ Café</a>
 
 			</nav>
-			<!-- <a href="/usuario/cadastrarJogo"><button
-					class="btn btn-outline-secondary my-2 my-sm-0">Novo Jogo</button></a> -->
+			
 		</div>
 	</div>
 </div>

@@ -10,13 +10,14 @@
 			<form action="/usuario/salvarJogo" th:object="${requisicaoNovoJogo}"
 				class="card-body" method="post">
 				<div class="form-group">
-					<label for="placar">Placar do Jogo</label> <input
-						th:field="*{placar}" th:errorclass="is-invalid"
-						class="form-control" placeholder="placar do jogo" type="number"
-						min="0" max="1000" /> <small>Informa qual o placar do
-						jogo.</small>
+					<label for="sala">Nome da Sala de Aula</label> 
+					<input
+						th:field="*{nome}" th:errorclass="is-invalid"
+						class="form-control" placeholder="nome da sala" type="text"
+						min="0" max="1000" />
+						 <small>Informe os dados da Sala de Aula.</small>
 					<div class="invalid-feedback" th:errors="*{placar}">Por
-						favor, informe um valor para o placar.</div>
+						favor, informe o nome da sala.</div>
 
 				</div>
 
@@ -26,3 +27,6 @@
 	</div>
 </body>
 </html>
+
+<a href="/cadastros/abreFormAluno"><button
+					class="btn btn-outline-secondary my-2 my-sm-0">Novo Jogo</button></a>
